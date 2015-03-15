@@ -18,5 +18,4 @@ How to integrate:
 4. Congrulation! All works!
 
 
-For more info and support, please visit as on http://imgresize.mobypolo.com
----------
+###For more info and support, please visit as on http://imgresize.mobypolo.com
