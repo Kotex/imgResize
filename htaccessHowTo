@@ -1,0 +1,5 @@
+DirectoryIndex index.php
+
+RewriteRule (.+\.(png|jpg|gif|tiff)[:\dxa-z]+)$ /imgResize/resizeOnAir.php?file=$1 [NC,L]
+
+AddDefaultCharset utf-8
