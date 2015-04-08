@@ -13,7 +13,7 @@ How to integrate:
 >chmod -R 0755 /path/to/folder
 
 3. Add this line to .htaccess somewhere on top of file:
->RewriteRule (.+\.(png|jpg|gif|tiff)[:\dxa-z]+)$ /imgResize/resizeOnAir.php?file=$1 [NC,L]
+>RewriteRule ((.+):([\dxa-z]+))$ /imgResize/resizeOnAir.php?file=$1 [B,L]
 
 4. Congrulation! All works!
 
