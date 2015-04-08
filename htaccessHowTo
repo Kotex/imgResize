@@ -1,5 +1,6 @@
 DirectoryIndex index.php
 
-RewriteRule (.+\.(png|jpg|gif|tiff)[:\dxa-z]+)$ /imgResize/resizeOnAir.php?file=$1 [NC,L]
+#RewriteRule (.+\.(png|jpg|gif|tiff)[:\dxa-z]+)$ /imgResize/resizeOnAir.php?file=$1 [NC,L]
+RewriteRule ((.+):([\dxa-z]+))$ /imgResize/resizeOnAir.php?file=$1 [B,L]
 
 AddDefaultCharset utf-8

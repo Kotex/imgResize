@@ -1,6 +1,6 @@
 <?
 define("ROOTDIR", $_SERVER['DOCUMENT_ROOT']);
-define("CACHEFOLDER", ROOTDIR."/imgResize/cache/");
+define("CACHEFOLDER", ROOTDIR."/ufiles/imgResize/cache/");
 
 
 $defPathCache = CACHEFOLDER;
@@ -16,10 +16,13 @@ ini_set('display_errors', 1);
 
 if(isset($_GET['file'])){
 	$work = "/".$_GET['file'];
-	$work = explode(":",$work);
-
-	$rFile = ROOTDIR.array_shift($work);
-	$opts = array_shift($work);
+	//$work = explode(":",$work);
+	preg_match_all("/(.+):([\dxa-z]+)$/", $work, $matches);
+	//echo print_r($matches,true);
+	//exit();
+	$rFile = ROOTDIR.array_shift($matches[1]);
+	$opts = array_shift($matches[2]);
+	//echo $_GET['file']."<br />";
 	if(!file_exists($rFile)){
 		header("HTTP/1.0 404 Not Found");
 		exit('No File');
